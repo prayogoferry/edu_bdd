@@ -18,7 +18,7 @@ class loginPage {
     }
 
     static sign_in(){
-        cy.contains(SIGN_IN)
+        cy.contains(SIGN_IN).click()
     }
 }
 

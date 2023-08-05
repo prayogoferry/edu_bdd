@@ -1,14 +1,17 @@
 /// <reference types = "cypress"/>
+
+import search from "./search_step"
 const {Given, When, Then} = require("@badeball/cypress-cucumber-preprocessor")
 
-
-
 Given('i open the Application', ()=>{
-    cy.visit('http://zero.webappsecurity.com/')
+    // cy.visit('http://zero.webappsecurity.com/')
+    search.visit()
 })
 
 When('i input keyword',()=>{
-    cy.get('#searchTerm').clear().type('zero{enter}')
+    let keyword = "zero"
+    // cy.get('#searchTerm').clear().type('zero{enter}')
+    search.fillSearch(keyword{enter})
 })
 
 Then('i see result of keyword', ()=>{
